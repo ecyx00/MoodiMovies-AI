@@ -1,0 +1,212 @@
+{
+  "O": {
+    "name_tr": "Açıklık",
+    "description_tr": "Hayal gücü, yaratıcılık ve yeni fikirlere açıklık düzeyi",
+    "facets": {
+      "O_F1": {
+        "name_tr": "Hayal Gücü",
+        "description_tr": "Hayal gücü kuvvetli, soyut düşünmeye yatkınlık",
+        "facet_id": 1,
+        "db_column": "O_F1"
+      },
+      "O_F2": {
+        "name_tr": "Sanatsal İlgi",
+        "description_tr": "Sanatsal etkinliklere ve estetiğe duyarlılık",
+        "facet_id": 2,
+        "db_column": "O_F2"
+      },
+      "O_F3": {
+        "name_tr": "Duygusallık",
+        "description_tr": "Duygusal deneyimlere açıklık",
+        "facet_id": 3,
+        "db_column": "O_F3"
+      },
+      "O_F4": {
+        "name_tr": "Macera Arayışı",
+        "description_tr": "Yeni deneyimlere ve maceralara açıklık",
+        "facet_id": 4,
+        "db_column": "O_F4"
+      },
+      "O_F5": {
+        "name_tr": "Zihinsel Merak",
+        "description_tr": "Zihinsel merak ve karmaşık fikirleri anlama isteği",
+        "facet_id": 5,
+        "db_column": "O_F5"
+      },
+      "O_F6": {
+        "name_tr": "Özgürlükçülük",
+        "description_tr": "Toplumsal normlara ve otoriteye karşı sorgulayıcı tutum",
+        "facet_id": 6,
+        "db_column": "O_F6"
+      }
+    }
+  },
+  "C": {
+    "name_tr": "Sorumluluk",
+    "description_tr": "Düzenli, sorumlu ve hedef odaklı olma eğilimi",
+    "facets": {
+      "C_F1": {
+        "name_tr": "Özyeterlilik",
+        "description_tr": "Görevleri başarıyla tamamlayabileceğine dair inanç",
+        "facet_id": 1,
+        "db_column": "C_F1"
+      },
+      "C_F2": {
+        "name_tr": "Düzenlilik",
+        "description_tr": "Düzenli olma ve planlı hareket etme eğilimi",
+        "facet_id": 2,
+        "db_column": "C_F2"
+      },
+      "C_F3": {
+        "name_tr": "Görev Bilinci",
+        "description_tr": "Sorumluluk bilinci ve görevlerini yerine getirme eğilimi",
+        "facet_id": 3,
+        "db_column": "C_F3"
+      },
+      "C_F4": {
+        "name_tr": "Başarı Arayışı",
+        "description_tr": "Hedeflere ulaşmak için çaba gösterme isteği",
+        "facet_id": 4,
+        "db_column": "C_F4"
+      },
+      "C_F5": {
+        "name_tr": "Özdisiplin",
+        "description_tr": "Zorluklara rağmen görevleri tamamlayabilme kararlılığı",
+        "facet_id": 5,
+        "db_column": "C_F5"
+      },
+      "C_F6": {
+        "name_tr": "İhtiyatlılık",
+        "description_tr": "Dikkatli düşünerek karar verme eğilimi",
+        "facet_id": 6,
+        "db_column": "C_F6"
+      }
+    }
+  },
+  "E": {
+    "name_tr": "Dışadönüklük",
+    "description_tr": "Sosyallik, dışa dönüklük, enerji ve pozitiflik",
+    "facets": {
+      "E_F1": {
+        "name_tr": "Sıcakkanlılık",
+        "description_tr": "İnsanlarla kolay ilişki kurabilme ve sıcaklık",
+        "facet_id": 1,
+        "db_column": "E_F1"
+      },
+      "E_F2": {
+        "name_tr": "Sosyallik",
+        "description_tr": "Topluluk içinde olmaktan keyif alma",
+        "facet_id": 2,
+        "db_column": "E_F2"
+      },
+      "E_F3": {
+        "name_tr": "Girişkenlik",
+        "description_tr": "Düşüncelerini açıkça ifade etme ve liderlik eğilimi",
+        "facet_id": 3,
+        "db_column": "E_F3"
+      },
+      "E_F4": {
+        "name_tr": "Aktiflik Düzeyi",
+        "description_tr": "Enerjik ve hareketli yaşam tarzı eğilimi",
+        "facet_id": 4,
+        "db_column": "E_F4"
+      },
+      "E_F5": {
+        "name_tr": "Heyecan Arayışı",
+        "description_tr": "Heyecan arayışı ve risk alma isteği",
+        "facet_id": 5,
+        "db_column": "E_F5"
+      },
+      "E_F6": {
+        "name_tr": "Neşelilik",
+        "description_tr": "Neşeli ve pozitif ruh hali",
+        "facet_id": 6,
+        "db_column": "E_F6"
+      }
+    }
+  },
+  "A": {
+    "name_tr": "Uyumluluk",
+    "description_tr": "Yardımseverlik, empati ve uzlaşmacı olma",
+    "facets": {
+      "A_F1": {
+        "name_tr": "Güven",
+        "description_tr": "İnsanların niyetlerine güvenme eğilimi",
+        "facet_id": 1,
+        "db_column": "A_F1"
+      },
+      "A_F2": {
+        "name_tr": "Dürüstlük",
+        "description_tr": "Dürüstlük ve içtenlikle hareket etme eğilimi",
+        "facet_id": 2,
+        "db_column": "A_F2"
+      },
+      "A_F3": {
+        "name_tr": "Alçakgönüllülük",
+        "description_tr": "Alçakgönüllü olma ve öne çıkmaktan kaçınma",
+        "facet_id": 3,
+        "db_column": "A_F3"
+      },
+      "A_F4": {
+        "name_tr": "Empati",
+        "description_tr": "Başkalarının duygularına karşı empati duyma",
+        "facet_id": 4,
+        "db_column": "A_F4"
+      },
+      "A_F5": {
+        "name_tr": "Yardımseverlik",
+        "description_tr": "Yardımseverlik ve başkalarına destek olma isteği",
+        "facet_id": 5,
+        "db_column": "A_F5"
+      },
+      "A_F6": {
+        "name_tr": "İş Birliği",
+        "description_tr": "Uzlaşmacı ve çatışmadan kaçınan tutum",
+        "facet_id": 6,
+        "db_column": "A_F6"
+      }
+    }
+  },
+  "N": {
+    "name_tr": "Duygusal Dengesizlik",
+    "description_tr": "Duygusal dengesizlik, kaygı ve stres düzeyi",
+    "facets": {
+      "N_F1": {
+        "name_tr": "Kaygı",
+        "description_tr": "Kaygı ve endişe duyma eğilimi",
+        "facet_id": 1,
+        "db_column": "N_F1"
+      },
+      "N_F2": {
+        "name_tr": "Öfke",
+        "description_tr": "Öfkeye yatkınlık ve tahammülsüzlük",
+        "facet_id": 2,
+        "db_column": "N_F2"
+      },
+      "N_F3": {
+        "name_tr": "Depresyon",
+        "description_tr": "Üzüntü, karamsarlık ve düşük ruh hali eğilimi",
+        "facet_id": 3,
+        "db_column": "N_F3"
+      },
+      "N_F4": {
+        "name_tr": "İçedönüklük",
+        "description_tr": "Sosyal ortamlarda çekingenlik ve utangaçlık",
+        "facet_id": 4,
+        "db_column": "N_F4"
+      },
+      "N_F5": {
+        "name_tr": "Dürtüsellik",
+        "description_tr": "Dürtü kontrolünde zorluk ve aşırılıklara yönelme",
+        "facet_id": 5,
+        "db_column": "N_F5"
+      },
+      "N_F6": {
+        "name_tr": "Savunmasızlık",
+        "description_tr": "Duygusal olarak savunmasız ve hassas olma",
+        "facet_id": 6,
+        "db_column": "N_F6"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8001:8001"
+    environment:
+      - DB_DRIVER=ODBC Driver 17 for SQL Server
+      - DB_SERVER=${DB_SERVER:-host.docker.internal}  # Windows/Mac host makineye erişim için
+      - DB_DATABASE=${DB_DATABASE:-MOODMOVIES}
+      # Windows Authentication ile çalışmak için özel yapılandırma gerekebilir
+      # Veya SQL Server için kullanıcı/şifre ile kimlik doğrulama yapılandırılmalı
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - GEMINI_MODEL=${GEMINI_MODEL:-gemini-2.0-flash-thinking-exp-01-21}
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+      - API_KEY=${API_KEY}
+      - WEBHOOK_SECRET=${WEBHOOK_SECRET}
+    restart: unless-stopped
+    volumes:
+      - ./logs:/app/logs  # Logları host makineye bağla

@@ -1,0 +1,222 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# celery beat schedule file
+celerybeat-schedule
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+# Bu dosya Git'e dahil edilecek
+!.env.example
+
+# Security sensitive files
+**/secrets/
+secrets.json
+secrets.yaml
+secrets.yml
+secrets.xml
+secrets.properties
+*.key
+*.pem
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.crt
+*.cer
+*.der
+*credentials*
+*Credentials*
+*CREDENTIALS*
+api_key*
+*api_key*
+*apikey*
+*AuthKey*
+*auth_key*
+*auth-key*
+*password*
+*PASSWORD*
+*azure.json
+*aws.json
+*.env.local
+*.env.development.local
+*.env.test.local
+*.env.production.local
+.npmrc
+.yarnrc
+.aws/
+.azure/
+.gcp/
+connection_string*
+database_url*
+*connection-string*
+*database-url*
+config.json
+appsettings.json
+appsettings.*.json
+MoodieMovies-*.json
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# Markdown dosyaları (README.md hariç)
+!api_doc.md
+backend_teknik_rapor.md
+!documentation.md
+gelisme_raporu.md
+*.md
+!README.md
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+*.ipr
+*.iws
+.idea_modules/
+out/
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# FastAPI specific
+fastapi_app.log
+
+# MoodieMovies AI service specific
+logs/
+*.log
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+tests/
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# MacOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# SQL Server
+*.mdf
+*.ldf
+*.ndf
