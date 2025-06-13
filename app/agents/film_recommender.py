@@ -386,7 +386,7 @@ class FilmRecommenderAgent:
             films = await self.recommendation_repository.get_films_by_genre_criteria(
                 include_genres=include_genres,
                 exclude_genres=exclude_genres,
-                limit=60  # Maximum number of candidate films
+                limit=140  # Maximum number of candidate films
             )
             
             logger.info(f"Retrieved {len(films)} candidate films based on genre criteria")
@@ -547,7 +547,7 @@ Sen, OCEAN kişilik profilleri ile film meta verileri arasında ilişki kurarak 
 
 ## GÖREV TANIMI
 
-Aşağıda detayları verilen kullanıcının OCEAN T-skorlarını ve 50 aday filmin meta verilerini (isim, türler, rating, çıkış tarihi, ülke, süre) kullanarak, bu kullanıcının kişilik profiline en yüksek uyumu gösteren **TAM OLARAK 20** filmi belirle. Seçimlerin, kişilik özelliklerinin filmlerin içeriksel ve biçimsel özellikleriyle nasıl örtüştüğüne dair mantıksal çıkarımlara dayanmalıdır.
+Aşağıda detayları verilen kullanıcının OCEAN T-skorlarını ve 140 aday filmin meta verilerini (isim, türler, rating, çıkış tarihi, ülke, süre) kullanarak, bu kullanıcının kişilik profiline en yüksek uyumu gösteren **TAM OLARAK 70** filmi belirle. Seçimlerin, kişilik özelliklerinin filmlerin içeriksel ve biçimsel özellikleriyle nasıl örtüştüğüne dair mantıksal çıkarımlara dayanmalıdır.
 
 ## GİRDİ VERİLERİ
 
@@ -567,7 +567,7 @@ Aşağıdaki JSON nesnesi, kullanıcının 5 ana OCEAN alanındaki T-skorların�
 
 ### 2. ADAY FİLM METAVERİLERİ
 
-Aşağıdaki JSON dizisi, değerlendirmen gereken 50 aday filmi ve mevcut meta verilerini içermektedir. **ÖNEMLİ NOT:** Bu filmlerin **PLOT (konu özeti) bilgisi YOKTUR.** Analizin sadece sağlanan meta verilere (isim, türler, rating, yıl, ülke, süre) dayanmalıdır.
+Aşağıdaki JSON dizisi, değerlendirmen gereken 140 aday filmi ve mevcut meta verilerini içermektedir. **ÖNEMLİ NOT:** Bu filmlerin **PLOT (konu özeti) bilgisi YOKTUR.** Analizin sadece sağlanan meta verilere (isim, türler, rating, yıl, ülke, süre) dayanmalıdır.
 
 ```json
 {json.dumps(candidate_films, indent=2, ensure_ascii=False, default=self._json_serial)}
@@ -584,7 +584,7 @@ Aşağıdaki JSON dizisi, değerlendirmen gereken 50 aday filmi ve mevcut meta v
     *   *Yüksek Dışadönüklük (E):* Yüksek tempolu aksiyon/macera, komedi, sosyal etkileşim içeren filmler.
     *   *Yüksek Uyumluluk (A):* Olumlu mesajlar veren, romantik, aile odaklı, dramatik ama umut veren yapımlar.
     *   *Yüksek Nevrotiklik (N):* Aşırı şiddet içeren, yoğun korku veya rahatsız edici temalara sahip (tür ve rating bilgisinden çıkarılabilecek) filmlerden kaçınma eğilimi; daha sakinletici veya pozitif filmlere yönelim.
-4.  **Nihai Seçim:** Yukarıdaki analitik eşleştirmeye dayanarak, sağlanan 50 aday film arasından kullanıcının kişilik profiline **en uygun olan TAM OLARAK 20** filmi seç. Seçimlerin, profilin bütününü yansıtmalı ve sadece tek bir özelliğe dayanmamalıdır.
+4.  **Nihai Seçim:** Yukarıdaki analitik eşleştirmeye dayanarak, sağlanan 140 aday film arasından kullanıcının kişilik profiline **en uygun olan TAM OLARAK 70** filmi seç. Seçimlerin, profilin bütününü yansıtmalı ve sadece tek bir özelliğe dayanmamalıdır.
 
 ## ÇIKTI GEREKSİNİMLERİ
 
@@ -592,13 +592,13 @@ Yanıtın **SADECE ve SADECE** aşağıdaki JSON formatında olmalıdır. JSON n
 
 ```json
 {{
-  "recommended_film_ids": ["FILM_ID_1", "FILM_ID_2", "FILM_ID_3", ..., "FILM_ID_20"]
+  "recommended_film_ids": ["FILM_ID_1", "FILM_ID_2", "FILM_ID_3", ..., "FILM_ID_70"]
 }}
 ```
 
 ## KESİN KISITLAMALAR
 
-*   Çıktı **tam olarak 20** film ID'si içermelidir.
+*   Çıktı **tam olarak 70** film ID'si içermelidir.
 *   Sadece `ADAY FİLM METAVERİLERİ` bölümünde sağlanan film ID'lerini kullan.
 *   Sağlanan meta verilerin dışına çıkma, varsayım yapma veya harici bilgi kullanma. **PLOT bilgisi olmadığını tekrar hatırla.**
 *   Yanıtın sadece belirtilen JSON formatında olsun. Öncesinde veya sonrasında **hiçbir ek metin bulunmamalıdır.**
@@ -616,7 +616,7 @@ Yanıtın **SADECE ve SADECE** aşağıdaki JSON formatında olmalıdır. JSON n
             response: The raw response string from Gemini API
         
         Returns:
-            A list of film IDs (up to 20)
+            A list of film IDs (up to 70)
             
         Raises:
             ValueError: If the response cannot be parsed or doesn't contain valid film IDs
@@ -682,14 +682,14 @@ Yanıtın **SADECE ve SADECE** aşağıdaki JSON formatında olmalıdır. JSON n
                 logger.error(f"Empty string elements found at indexes {empty_strings}")
                 raise ValueError(f"All film IDs must be non-empty, found empty strings at indexes {empty_strings}")
             
-            # Handle case where fewer than 20 films are returned
-            if len(film_ids) < 20:
-                logger.warning(f"Gemini returned fewer than 20 films ({len(film_ids)}). This might affect recommendation quality.")
+            # Handle case where fewer than 70 films are returned
+            if len(film_ids) < 70:
+                logger.warning(f"Gemini returned fewer than 70 films ({len(film_ids)}). This might affect recommendation quality.")
             
-            # Ensure we don't exceed 20 films
-            if len(film_ids) > 20:
-                logger.warning(f"Gemini returned more than 20 films ({len(film_ids)}), truncating to 20")
-                film_ids = film_ids[:20]
+            # Ensure we don't exceed 70 films
+            if len(film_ids) > 70:
+                logger.warning(f"Gemini returned more than 70 films ({len(film_ids)}), truncating to 70")
+                film_ids = film_ids[:70]
             
             return film_ids
             

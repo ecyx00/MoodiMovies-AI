@@ -196,7 +196,7 @@ logs/
 .env.development
 .env.test
 .env.production
-tests/
+# tests/ - Birim testleri için erişime izin ver
 
 # Docker
 .dockerignore
