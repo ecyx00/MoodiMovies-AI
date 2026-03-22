@@ -21,7 +21,7 @@ Daha detaylı bilgi için [`documentation.md`](documentation.md) dosyasına baka
 
 - Python 3.10 veya daha yeni sürüm
 - MS SQL Server veritabanı (MOODMOVIES)
-- Google Gemini API erişimi (takım üyeleri ortak API anahtarını kullanabilir)
+- Google Gemini API erişimi
 - Git
 
 ### Adım 1: Projeyi Klonlama
@@ -77,8 +77,6 @@ GEMINI_MODEL=<Kullanılacak Gemini Model Adı>
 LOG_LEVEL=<Log Seviyesi>
 LOG_FULL_GEMINI_IO=<True/False>
 ```
-
-**NOT:** Takım yöneticinizden API anahtarlarını ve gerekli bağlantı bilgilerini alın. Bu bilgileri GitHub'a veya herhangi bir halka açık alana yüklemediğinizden emin olun.
 
 ## Uygulamayı Çalıştırma
 
@@ -139,32 +137,6 @@ Not: Veritabanında bulunan gerçek soru ve cevap ID'lerine göre bu değerleri 
    - Kullanıcının profiline göre uygun film türleri belirlenir
    - Belirlenen türlere göre aday filmler seçilir
    - Kişilik profiline en uygun filmler seçilir ve veritabanına kaydedilir
-
-## Sorun Giderme
-
-- **Veritabanı Bağlantı Hatası**: 
-  - `.env` dosyasındaki veritabanı bilgilerinin doğru olduğundan emin olun
-  - SQL Server'in çalıştığını kontrol edin
-  - Gerekli ODBC sürücülerinin kurulu olduğundan emin olun
-
-- **Python Modül Hatası**: 
-  - `pip install -r requirements.txt` komutunu çalıştırarak tüm bağımlılıkları yükleyin
-  - Sanal ortamın aktif olduğundan emin olun
-  - Python sürümünün 3.10 veya daha yeni olduğunu kontrol edin
-
-- **Gemini API Hatası**: 
-  - `.env` dosyasındaki API anahtarının doğru olduğunu kontrol edin
-  - API kullanım limitlerini aşmadığınızdan emin olun
-  - Belirtilen Gemini modelinin mevcut olduğunu doğrulayın
-
-## Takım İçi Geliştirme Süreci
-
-1. En güncel kodu alın: `git pull origin main`
-2. Değişikliklerinizi yapın
-3. Değişiklikleri commit edin: `git commit -am "Açıklayıcı commit mesajı"`
-4. Değişikliklerinizi gönderin: `git push origin main`
-
-Bu repository private olduğu ve sadece takım üyeleri erişebildiği için doğrudan main branch üzerinde çalışabiliriz.
 
 ## Lisans
 
