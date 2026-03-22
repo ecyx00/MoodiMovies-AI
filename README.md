@@ -13,8 +13,6 @@ MoodieMovies AI Servisi, kullanıcıların Big Five (OCEAN) kişilik modelini ku
 - **Agent 1: Kişilik Profili Hesaplayıcı** - Kullanıcıların test yanıtlarından kişilik T-skorlarını hesaplar
 - **Agent 2: Film Önerici** - Kişilik profiline dayanarak film önerileri oluşturur
 
-Daha detaylı bilgi için [`documentation.md`](documentation.md) dosyasına bakabilirsiniz.
-
 ## Kurulum
 
 ### Önkoşullar
